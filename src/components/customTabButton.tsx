@@ -4,7 +4,6 @@ import { Text, TouchableOpacity } from "react-native";
 
 const CustomTabButton = (props: any) => {
   const { children, onPress, accessibilityState } = props;
-  console.log(props);
   if (accessibilityState.selected) {
     return (
       <View style={styles.btnWrapper}>

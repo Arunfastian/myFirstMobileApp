@@ -6,11 +6,12 @@ import {
   View,
 } from "react-native";
 
-const CitiesList = ({ route }: any) => {
+const CitiesList = ({ route,navigation }: any) => {
   const [cites, setCities] = useState([]);
   const [loading, setLoading] = useState(false);
   useEffect(() => {
-    const { countryId } = route.params;
+    const { countryId,countryName } = route.params;
+    navigation.setOptions({headerTitle: `Cities of ${countryName}`})
     setLoading(true);
     fetch(`https://api.eatachi.co/api/City/ByCountry/${countryId}`)
       .then((response) => {
