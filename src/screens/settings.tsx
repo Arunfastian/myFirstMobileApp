@@ -14,8 +14,8 @@ const Settings = () => {
       },
       {
         text: "Ok",
-        onPress: () => {
-          console.log({ firstName, lastName, inFinalYear });
+        onPress: async () => {
+          console.log({ firstName, lastName, inFinalYear });          
         },
       },
     ]);
