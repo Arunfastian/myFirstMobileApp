@@ -8,6 +8,7 @@ import { StyleSheet } from "react-native";
 import CustomTabButton from "../components/customTabButton";
 import About from "../screens/about";
 import Profile from "../screens/profile";
+import Map from "../screens/map";
 
 const Tab = createBottomTabNavigator();
 const BottomNavigator = ({navigation}:any) => {
@@ -87,6 +88,25 @@ const BottomNavigator = ({navigation}:any) => {
             return (
               <MaterialIcons
                 name="person"
+                size={24}
+                color={props.focused ? "black" : "white"}
+              />
+            );
+          },
+          tabBarButton: (props: any) => {
+            return <CustomTabButton {...props} />;
+          },
+        }}
+        
+      />
+      <Tab.Screen
+        name="Map"
+        component={Map}
+        options={{
+          tabBarIcon: (props) => {
+            return (
+              <MaterialIcons
+                name="location-pin"
                 size={24}
                 color={props.focused ? "black" : "white"}
               />
