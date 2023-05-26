@@ -4,7 +4,7 @@ import { useOwnerContext } from '../context/ownerContext';
 
 
 const About = () => {
-    const {owner,stars,updateStars} = useOwnerContext();
+    const {owner,stars,updateStars, setTotalAmount} = useOwnerContext();
     const handleIncrease = () => {
         if(stars < 5){updateStars(stars+1);}
     }

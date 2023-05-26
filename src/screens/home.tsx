@@ -1,4 +1,5 @@
 import {Button, Text,View} from 'react-native';
+import { useOwnerContext } from '../context/ownerContext';
 
 
 const Home = ({navigation}:any) => {

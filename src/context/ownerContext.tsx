@@ -10,6 +10,7 @@ const OwnerContextProvider = ({children}:any) => {
         studentId: '19K-1437',
         section: '8A SMD'
     })
+    const [totalAmount,setTotalAmount] = useState(200);
     const [stars,setStars] = useState(1);
     
     useEffect(()=>{
@@ -27,7 +28,7 @@ const OwnerContextProvider = ({children}:any) => {
     }
 
     return (
-        <OwnerContext.Provider value={{owner,stars,updateStars}}>
+        <OwnerContext.Provider value={{owner,stars,updateStars, totalAmount, setTotalAmount}}>
             {children}
         </OwnerContext.Provider>
     )

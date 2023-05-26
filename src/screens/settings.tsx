@@ -15,7 +15,11 @@ const Settings = () => {
       {
         text: "Ok",
         onPress: async () => {
-          console.log({ firstName, lastName, inFinalYear });          
+          console.log({ firstName, lastName, inFinalYear });
+          AsyncStorage.setItem(
+            "Settings",
+            JSON.stringify({ firstName, lastName, inFinalYear })
+          );
         },
       },
     ]);

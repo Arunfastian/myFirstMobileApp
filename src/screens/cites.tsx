@@ -18,6 +18,11 @@ const CitiesList = ({ route,navigation }: any) => {
         return response.json();
       })
       .then((newCities) => {
+        newCities.sort((curr : any,next : any)=> {
+           if(curr.name > next.name) return 1;
+           else if(curr.name < next.name) return -1;
+           else return 0;
+        });
         setCities(newCities);
         setLoading(false);
       })

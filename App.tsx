@@ -6,9 +6,6 @@ import DrawerNavigator from "./src/navigators/drawerNavigator";
 import OwnerContextProvider from "./src/context/ownerContext";
 function App() {
   return(
-  // <OwnerContextProvider>
-  //   <StackNavigator />;
-  // </OwnerContextProvider> 
   <StackNavigator/>
   )
 }
